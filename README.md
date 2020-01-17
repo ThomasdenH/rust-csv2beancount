@@ -64,10 +64,14 @@ csv:
   description: 2
   # The csv delimiter (default ",")
   delimiter: ","
+  # The column index for the payee of the transaction. Omitted by default.
+  payee: 4
   # The number of csv rows to skip at the start (default 0)
   skip: 0
   # Whether by default the transaction moves the currency from the "other" account to the processing account
   toggle_sign: false
+  # The quote character delimiting the entries. Default: "\""
+  quote: "'"
 transactions:
   # The description to match
   "INTEREST CREDIT":
@@ -83,5 +87,3 @@ This tool tries to mirror https://github.com/PaNaVTEC/csv2beancount exactly, exc
 
 - `date_format` requires `strftime` format, not the bespoke one the original uses
 - `info` in a `transactions` rule actually does something
-
-
